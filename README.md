@@ -8,7 +8,8 @@ website](https://ubc-mds.github.io/textfeatureinfor/)
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/UBC-MDS/textfeatureinfor/workflows/R-CMD-check/badge.svg)](https://github.com/UBC-MDS/textfeatureinfor/actions)
+[![R-CMD-check](https://github.com/UBC-MDS/textfeatureinfor/workflows/R-CMD-check/badge.svg)](https://github.com/UBC-MDS/textfeatureinfor/actions)    
+[![codecov](https://codecov.io/gh/UBC-MDS/textfeatureinfor/branch/master/graph/badge.svg?token=MmO0w3tyAn)](https://codecov.io/gh/UBC-MDS/textfeatureinfor)
 <!-- badges: end -->
 
 ## **Description**
