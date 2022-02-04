@@ -92,18 +92,21 @@
 </h2>
 <p>To understand the basics of the <code>avg_word_len</code> function, we can take a look at its interaction with a simple text object.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">text</span> <span class="op">&lt;-</span> <span class="st">"Star wars is my favourite movie"</span>
+<code class="sourceCode R"><span class="va">text</span> <span class="op">&lt;-</span> <span class="st">"Star wars is my favourite movie!"</span>
 
 <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="../reference/avg_word_len.html">avg_word_len</a></span><span class="op">(</span><span class="va">text</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span> <span class="co"># the output of avg_word_len is rounded to 2 decimals</span>
 <span class="co">#&gt; [1] 4.33</span></code></pre></div>
-<p>From this basic example, we can see that the average length of words in this piece of text is <code>4.33</code>.</p>
+<p>From this basic example, we can see that the average length of words in this piece of text is <code>4.33</code>. Note that the exclamation point, ‘!’, is not counted as a character towards the average word length calculation. Moreover, the following is a list of punctuation marks that are disregarded during average word length calculations:</p>
+<pre><code><span class="va">punc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">','</span>,<span class="st">'!'</span>,<span class="st">'"'</span>,<span class="st">'#'</span>,<span class="st">'$'</span>,<span class="st">'%'</span>,<span class="st">'&amp;'</span>,<span class="st">"'"</span>,<span class="st">'('</span>,<span class="st">')'</span>,<span class="st">'*'</span>,<span class="st">'+'</span>,<span class="st">'-'</span>,<span class="st">'.'</span>,
+            <span class="st">'/'</span>,<span class="st">':'</span>,<span class="st">';'</span>,<span class="st">'&lt;'</span>,<span class="st">'='</span>,<span class="st">'&gt;'</span>,<span class="st">'?'</span>,<span class="st">'@'</span>,<span class="st">'['</span>,<span class="st">']'</span>,<span class="st">'^'</span>,<span class="st">'_'</span>,<span class="st">'`'</span>,
+            <span class="st">'{'</span>,<span class="st">'|'</span>,<span class="st">'}'</span>,<span class="st">'~'</span><span class="op">)</span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="example-with-a-dataframe">Example with a dataframe<a class="anchor" aria-label="anchor" href="#example-with-a-dataframe"></a>
 </h2>
 <p>Now that we understand how to use this function, let’s apply <code>avg_word_len</code> to an entire data set. This is more practical aspect of this function considering that feature extraction will need to be done for entire data-frames in order to be useful for machine learning models.</p>
 <p>Let’s first create a toy data-set with 5 examples:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">toy_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>messages <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
   <span class="st">"Hello World"</span>,
   <span class="st">"Star wars is my favourite movie"</span>,
@@ -119,7 +122,7 @@
 <span class="co">#&gt; 4                  What a wonderful world</span>
 <span class="co">#&gt; 5 You should watch Spiderman: no way home</span></code></pre></div>
 <p>Now, we will leverage the <code>avg_word_len</code> function to extract the average word lengths from the toy data and add it as a new column in the toy data frame</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># applies avg_word_len function to each row in the data frame</span>
 <span class="va">toy_data</span><span class="op">[</span><span class="st">"average_word_lengths"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">toy_data</span><span class="op">[</span><span class="st">"messages"</span><span class="op">]</span>, 
                                           <span class="fl">1</span>,
