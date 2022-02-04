@@ -81,9 +81,9 @@
 <li>engineer their own features using these additional characteristics</li>
 <li>train their models with their engineered features for better model results</li>
 </ul>
-<p>The <code>remove_stop_words</code> function from the <code>textfeatureinfo</code> package is one of four functions that aids in this text data extraction process. Specifically, <code>remove_stop_words</code> makes it easy to remove stopwords from a piece of text.</p>
+<p>The <code>remove_stop_words</code> function from the <code>textfeatureinfor</code> package is one of four functions that aids in this text data extraction process. Specifically, <code>remove_stop_words</code> makes it easy to remove stopwords from a piece of text.</p>
 <p>This document provides detailed instructions on how to apply the <code>remove_stop_words</code> function on text data for quick access to a new feature that can be added into various machine learning models.</p>
-<p>You can start by loading the <code>textfeatureinfo</code> package:</p>
+<p>You can start by loading the <code>textfeatureinfor</code> package:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">textfeatureinfor</span><span class="op">)</span></code></pre></div>
 </div>
@@ -92,11 +92,10 @@
 </h2>
 <p>To understand the basics of the <code>remove_stop_words</code> function, we can take a look at its interaction with a simple text object.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">text</span> <span class="op">&lt;-</span> <span class="st">"Two things are infinite: the universe and human stupidity; 
-and I'm not sure about the universe."</span>
+<code class="sourceCode R"><span class="va">text</span> <span class="op">&lt;-</span> <span class="st">"Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."</span>
 
 <span class="fu"><a href="../reference/remove_stop_words.html">remove_stop_words</a></span><span class="op">(</span><span class="va">text</span><span class="op">)</span>
-<span class="co">#&gt; [1] "infinite"  "universe"  "human"     "stupidity" "\nand"     "universe"</span></code></pre></div>
+<span class="co">#&gt; [1] "infinite"  "universe"  "human"     "stupidity" "universe"</span></code></pre></div>
 <p>From this basic example, we can see that only 5 words are not stopwords in this quote from Albert Einstein.</p>
 </div>
 <div class="section level2">
