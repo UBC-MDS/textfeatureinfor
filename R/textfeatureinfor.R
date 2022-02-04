@@ -112,7 +112,7 @@ perc_cap_words <- function(text) {
     if(rapportools::is.empty(text)){
         stop("Please provide a non-empty text!")
     }
-    no_cap_words <- stringr::str_count(text, "\\b[A-Z]{2,}\\b")
+    no_cap_words <- stringr::str_count(text, "\\b[A-Z]{1,}\\b")
     words_in_string <- lengths(strsplit(text, "\\W+"))
 
     return (no_cap_words/words_in_string * 100)
