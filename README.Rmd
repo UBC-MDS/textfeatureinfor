@@ -19,6 +19,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/UBC-MDS/textfeatureinfor/workflows/R-CMD-check/badge.svg)](https://github.com/UBC-MDS/textfeatureinfor/actions)
+
+[![codecov](https://codecov.io/gh/UBC-MDS/textfeatureinfor/branch/main/graph/badge.svg?token=MmO0w3tyAn)](https://codecov.io/gh/UBC-MDS/textfeatureinfor)
 <!-- badges: end -->
 
 ## **Description**
