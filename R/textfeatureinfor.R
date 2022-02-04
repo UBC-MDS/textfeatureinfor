@@ -1,5 +1,5 @@
 # count_punc
-#' Count punctuations
+#' Count the punctuations in a string.
 #'
 #' @param text A character vector with, at most, one element.
 #' @inheritParams stringi::stri_detect_fixed
@@ -33,7 +33,7 @@ count_punc <- function(text) {
 
 
 # avg_word_len
-#' Calculate average word length in a string
+#' Calculate the average word length in a string.
 #'
 #' @param text A character vector for the average word length extraction.
 #' @return A numeric vector representing the average word length in the text.
@@ -91,7 +91,7 @@ avg_word_len <- function(text) {
 
 
 # perc_cap_words
-#' Percentage of fully capitalised words in a string
+#' Percentage of fully capitalised words in a string.
 #'
 #' @param text A character vector with length one containing the piece of text to analyze.
 #'
@@ -121,7 +121,7 @@ perc_cap_words <- function(text) {
 
 
 # remove_stop_words
-#' Remove stop words
+#' Remove the stop words in a string.
 #'
 #' @param text A character vector with length one containing the piece of text to analyze.
 #'
