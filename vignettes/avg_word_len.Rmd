@@ -38,12 +38,19 @@ library(textfeatureinfor)
 To understand the basics of the `avg_word_len` function, we can take a look at its interaction with a simple text object. 
 
 ```{r}
-text <- "Star wars is my favourite movie"
+text <- "Star wars is my favourite movie!"
 
 round(avg_word_len(text), 2) # the output of avg_word_len is rounded to 2 decimals
 ```
 
-From this basic example, we can see that the average length of words in this piece of text is `4.33`.
+From this basic example, we can see that the average length of words in this piece of text is `4.33`. Note that the exclamation point, '!', is not counted as a character towards the average word length calculation. Moreover, the following is a list of punctuation marks that are disregarded during average word length calculations:
+
+```
+punc <- c(',','!','"','#','$','%','&',"'",'(',')','*','+','-','.',
+            '/',':',';','<','=','>','?','@','[',']','^','_','`',
+            '{','|','}','~')
+```            
+
 
 ## Example with a dataframe
 
