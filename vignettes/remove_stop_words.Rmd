@@ -24,11 +24,11 @@ During Natural Language Processing (NLP), data scientists may want:
 - engineer their own features using these additional characteristics 
 - train their models with their engineered features for better model results
 
-The `remove_stop_words` function from the `textfeatureinfo` package is one of four functions that aids in this text data extraction process. Specifically, `remove_stop_words` makes it easy to remove stopwords from a piece of text.
+The `remove_stop_words` function from the `textfeatureinfor` package is one of four functions that aids in this text data extraction process. Specifically, `remove_stop_words` makes it easy to remove stopwords from a piece of text.
 
 This document provides detailed instructions on how to apply the `remove_stop_words` function on text data for quick access to a new feature that can be added into various machine learning models.
 
-You can start by loading the `textfeatureinfo` package:
+You can start by loading the `textfeatureinfor` package:
 
 ```{r setup}
 library(textfeatureinfor)
@@ -39,8 +39,7 @@ library(textfeatureinfor)
 To understand the basics of the `remove_stop_words` function, we can take a look at its interaction with a simple text object.
 
 ```{r}
-text <- "Two things are infinite: the universe and human stupidity; 
-and I'm not sure about the universe."
+text <- "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe."
 
 remove_stop_words(text)
 ```

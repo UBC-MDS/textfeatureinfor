@@ -25,7 +25,7 @@ During Natural Language Processing (NLP), data scientists may want:
 
 The library `textfeatureinfor` has four functions, one of which is `perc_cap_words`. Here we will explore the usage of this function.
 
-Let us first load the `textfeatureinfo` package:
+Let us first load the `textfeatureinfor` package:
 ```{r setup}
 library(textfeatureinfor)
 ```
