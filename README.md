@@ -92,3 +92,15 @@ perc_cap_words("This is REALLY Awesome!")
 remove_stop_words("Tomorrow is a big day!")
 #> [1] "tomorrow"
 ```
+## Contributing
+
+We encourage any contributions! For more information on contribution guidelines, please see the [contributors](https://github.com/UBC-MDS/textfeatureinfor/blob/main/CONTRIBUTING.md) tab
+
+* Paniz Fazlali: @paradise1260
+* Jacqueline Chong: @Jacq4nn
+* Lynn Wu: @lynnwbl
+* Kiran Phaterpekar: @kphaterp
+
+## Licence
+
+`textfeatureinfor` is licensed under the terms of the MIT license.
